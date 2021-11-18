@@ -78,7 +78,6 @@ function MyApp(props: any) {
     }
 
     const backdropDrawer = () => {
-        console.log("yessssss!!!!!")
         setDrawIsOpen(false)
     }
 
@@ -111,19 +110,19 @@ function MyApp(props: any) {
         )
     }
 
-    if (url.pathname === "/dashboard" || url.pathname === "/dashboard/addfund" || url.pathname === "/dashboard/airtime" || url.pathname === "/dashboard/cable") {
+    if (url.pathname === "/dashboard" || url.pathname === "/dashboard/addfund" || url.pathname === "/dashboard/bills" || url.pathname === "/dashboard/airtime" || url.pathname === "/dashboard/cable") {
         return (
 
             <div style={{ height: '100%' }}>
                 <Provider store={store}>
                     <AdminNav />
                     <Admin_minMenu />
-                    <SiderDrawer show={DrawIsOpen} />
+                    <SiderDrawer show={DrawIsOpen} closedrawer={backdropDrawer} />
 
                     <props.Component {...props.pageProps} />
                     {/* {isNoProtectedRoute && <Footer />} */}
 
-                    <Menurack drawerClicked={siderDrawerToggle} drawbol={DrawIsOpen} enddraw={backdropDrawer} />
+                    <Menurack drawerClicked={siderDrawerToggle} drawbol={DrawIsOpen} />
                     {isNoProtectedRoute}
                 </Provider>
             </div>

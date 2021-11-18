@@ -21,11 +21,11 @@ export const Categories = [
 ]
 
 export const navbarLinks = [
-  { id: 1, text: 'Contact-Us', path: 'contact' },
-  { id: 2, text: 'Article', path: 'articles' },
-  { id: 4, text: 'Products', path: 'ourproduct' },
-  { id: 3, text: 'About', path: 'about' },
-  { id: 4, text: 'Join', path: 'join' },
+  { id: 1, text: 'Home', path: '' },
+  { id: 2, text: 'About', path: '#' },
+  { id: 4, text: 'Contact-Us', path: '#' },
+  { id: 3, text: 'Onsales', path: '#' },
+  { id: 4, text: 'Login', path: '/user/login' },
 ];
 
 export const AdminRoute = [

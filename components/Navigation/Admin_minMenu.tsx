@@ -5,6 +5,7 @@ import { IoNotificationsSharp } from "react-icons/io5"
 import { IoSearchOutline } from "react-icons/io5";
 import { CgOptions } from "react-icons/cg";
 import { RiBarChartHorizontalLine } from "react-icons/ri";
+import Link from "next/link";
 
 function Admin_minMenu(props: any) {
     return (
@@ -32,6 +33,9 @@ function Admin_minMenu(props: any) {
                         className="rounded-full md:w-16 md:h-16 h-16 w-16"
                     />
                 </div>
+                <Link href="/">
+                    <a className=" mt-[49px] text-[#0e1766] text-sm absolute  flex justify-center">logout</a>
+                </Link>
 
             </div>
 

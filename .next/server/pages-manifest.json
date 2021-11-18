@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/dashboard/cable": "pages/dashboard/cable.js",
-  "/dashboard/airtime": "pages/dashboard/airtime.js"
+  "/": "pages/index.js",
+  "/user/register": "pages/user/register.js"
 }
