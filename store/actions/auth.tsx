@@ -27,23 +27,23 @@ export const loadUser = () => {
 
             // User was loaded successfully.
             if (res.status === 200) {
-    
+
                 dispatch({ type: types.USER_LOADED, payload: res.data });
             }
         } catch (error) {
             console.log(error);
             if (error.response.status === 422) {
                 return dispatch(types.AUTHENTICATION_ERROR, {
-                    errorMsg: "Email oder Passwort sind nicht korrekt.",
+                    errorMsg: "Email or Password is incorrect.",
                 });
             }
             if (error.response.status === 419) {
                 return dispatch(types.AUTHENTICATION_ERROR, {
-                    errorMsg: "Keinen Serverzugang.",
+                    errorMsg: "Authentication Error.",
                 });
             } else {
                 return dispatch(types.AUTHENTICATION_ERROR, {
-                    errorMsg: "Sorry, etwas ist schief gelaufen.",
+                    errorMsg: "Sorry, Something went wrong.",
                 });
             }
         }
@@ -66,9 +66,9 @@ export const login = (email: string, password: string): any => {
                 email,
                 password,
             });
-            
+
             // Authentication was successful.
-         
+
             if (res.status === 204) {
                 dispatch(loadUser());
                 dispatch({

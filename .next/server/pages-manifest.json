@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
-  "/user/register": "pages/user/register.js"
+  "/user/register": "pages/user/register.js",
+  "/user/email/verify/[userID]/[hash]": "pages/user/email/verify/[userID]/[hash].js"
 }

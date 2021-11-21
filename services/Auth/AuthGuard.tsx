@@ -132,7 +132,7 @@ export class AuthGuard {
                 (pathname === "/user/register" || pathname === "/user/login")
             ) {
                 res.writeHead(302, {
-                    Location: "/home",
+                    Location: "/dashboard",
                 });
                 res.end();
             }
